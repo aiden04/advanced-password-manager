@@ -129,6 +129,30 @@ def User_pswd():
 print()
 print()
 
+def Invalid():
+    clear()
+    print()
+    CLEAR_SCREEN = '\033[2J'
+    RED = '\u001b[31m'
+    RESET = '\033[0m'
+    print(CLEAR_SCREEN + RED + """
+░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
+░███████╗██████╗░██████╗░░█████╗░██████╗░░
+░██╔════╝██╔══██╗██╔══██╗██╔══██╗██╔══██╗░
+░█████╗░░██████╔╝██████╔╝██║░░██║██████╔╝░
+░██╔══╝░░██╔══██╗██╔══██╗██║░░██║██╔══██╗░
+░███████╗██║░░██║██║░░██║╚█████╔╝██║░░██║░
+░╚══════╝╚═╝░░╚═╝╚═╝░░╚═╝░╚════╝░╚═╝░░╚═╝░
+░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
+""" + RESET)
+    print()
+    print()
+    print("Invalid Input")
+    print()
+    print()
+    pause()
+
+
 def choice():
     print()
     print()
@@ -217,9 +241,7 @@ def choice():
         
     else:
         print()
-        print("Invalid Input.")
-        print()
-        pause()
+        Invalid()
         clear()
         choice()
 
