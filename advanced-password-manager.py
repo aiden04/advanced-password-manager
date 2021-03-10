@@ -72,12 +72,12 @@ def Generated_pswd():
     web = "Website: " + website + "\n"
     pwd = "Password: " + password + "\n"
     
-    file.write("---------------------------------\n")
+    file.write("===============================================\n")
     file.write(usrnm)
     file.write(mail)
     file.write(pwd)
     file.write(web)
-    file.write("---------------------------------\n")
+    file.write("===============================================\n")
     file.write("\n")
     file.close
 
@@ -86,7 +86,7 @@ def User_pswd():
     
     print()
     CLEAR_SCREEN = '\033[2J'
-    Magenta = '\u001b[35m'   # mode 31 = red forground
+    Magenta = '\u001b[32m'   # mode 31 = red forground
     RESET = '\033[0m'  # mode 0  = reset
     print(CLEAR_SCREEN + Magenta + """
 ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
@@ -118,12 +118,12 @@ def User_pswd():
     pswd = "Password: " + PaSSword + "\n"
     webURL = "Website: " + Website + "\n"
     
-    file.write("---------------------------------\n")
+    file.write("===============================================\n")
     file.write(usern)
     file.write(Email)
     file.write(pswd)
     file.write(webURL)
-    file.write("---------------------------------\n")
+    file.write("===============================================\n")
     file.write("\n")
     file.close
 
@@ -134,8 +134,8 @@ def choice():
     print()
     print()
     CLEAR_SCREEN = '\033[2J'
-    RED = '\u001b[31m'   # mode 31 = red forground
-    RESET = '\033[0m'  # mode 0  = reset
+    RED = '\u001b[33m'
+    RESET = '\033[0m'
     print(CLEAR_SCREEN + RED + """
 ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
 ░██████╗░░█████╗░░██████╗░██████╗░██╗░░░░░░░██╗░█████╗░██████╗░██████╗░
@@ -153,6 +153,7 @@ def choice():
 ░╚═╝░░░░░╚═╝╚═╝░░╚═╝╚═╝░░╚══╝╚═╝░░╚═╝░╚═════╝░╚══════╝╚═╝░░╚═╝░░░░░░░░░
 ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
 """ + RESET)
+    print(' - Created By "Aiden Tingler"')
     print()
     print(' - To have your password generated enter "Generated"')
     print(' - To enter your own password enter "My own"')
