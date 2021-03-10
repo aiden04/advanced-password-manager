@@ -4,7 +4,8 @@ And advanced password manager, you can add your own password, or have a generate
 # Easy Setup
 Make sure you have python 3.x downloaded,
 open a command promt in the folder with the script,
-run python3 advanced-password-manager,
+run "pip install -r requirements.txt",
+run "python3 advanced-password-manager",
 fill in all the user inputs that come up.
 
 # Stored
