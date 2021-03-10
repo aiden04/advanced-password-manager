@@ -147,7 +147,7 @@ def Invalid():
 """ + RESET)
     print()
     print()
-    print("Invalid Input")
+    print(" - Invalid Input!")
     print()
     print()
     pause()
