@@ -4,6 +4,7 @@ import os
 
 clear = lambda: os.system('cls')
 pause = lambda: os.system('pause')
+mode = lambda: os.system('mode')
 
 MAX_LEN = 12
 
@@ -35,14 +36,33 @@ def Generated_pswd():
     file = open("passwords.txt", 'a')
 
     print()
+    CLEAR_SCREEN = '\033[2J'
+    Cyan = ' \u001b[36m'   # mode 31 = red forground
+    RESET = '\033[0m'  # mode 0  = reset
+    print(CLEAR_SCREEN + Cyan + """
+░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
+░██████╗░░█████╗░░██████╗░██████╗░██╗░░░░░░░██╗░█████╗░██████╗░██████╗░
+░██╔══██╗██╔══██╗██╔════╝██╔════╝░██║░░██╗░░██║██╔══██╗██╔══██╗██╔══██╗
+░██████╔╝███████║╚█████╗░╚█████╗░░╚██╗████╗██╔╝██║░░██║██████╔╝██║░░██║
+░██╔═══╝░██╔══██║░╚═══██╗░╚═══██╗░░████╔═████║░██║░░██║██╔══██╗██║░░██║
+░██║░░░░░██║░░██║██████╔╝██████╔╝░░╚██╔╝░╚██╔╝░╚█████╔╝██║░░██║██████╔╝
+░╚═╝░░░░░╚═╝░░╚═╝╚═════╝░╚═════╝░░░░╚═╝░░░╚═╝░░░╚════╝░╚═╝░░╚═╝╚═════╝░
+░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
+░███╗░░░███╗░█████╗░███╗░░██╗░█████╗░░██████╗░███████╗██████╗░░░░░░░░░░
+░████╗░████║██╔══██╗████╗░██║██╔══██╗██╔════╝░██╔════╝██╔══██╗░░░░░░░░░
+░██╔████╔██║███████║██╔██╗██║███████║██║░░██╗░█████╗░░██████╔╝░░░░░░░░░
+░██║╚██╔╝██║██╔══██║██║╚████║██╔══██║██║░░╚██╗██╔══╝░░██╔══██╗░░░░░░░░░
+░██║░╚═╝░██║██║░░██║██║░╚███║██║░░██║╚██████╔╝███████╗██║░░██║░░░░░░░░░
+░╚═╝░░░░░╚═╝╚═╝░░╚═╝╚═╝░░╚══╝╚═╝░░╚═╝░╚═════╝░╚══════╝╚═╝░░╚═╝░░░░░░░░░
+░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
+""" + RESET)
+    userName = input(" - Please enter your username: ")
+    email = input(" - Please enter the email used for the account: ")
+    website = input(" - Please enter the web address here: ")
     print()
-    userName = input("Please enter your username: ")
-    email = input("Please enter the email used for the account: ")
-    website = input("Please enter the web address here: ")
+    Password = print(f' - Your password for {website} under the username {userName} using the email {email} will be "{password}"')
     print()
-    Password = print(f'Your password for {website} under the username {userName} using the email {email} will be "{password}"')
-    print()
-    print("Information saved under Passwords.txt")
+    print(" - Information saved under Passwords.txt")
     
     print()
     print()
@@ -65,14 +85,33 @@ def User_pswd():
     file = open("passwords.txt", 'a')
     
     print()
-    print()
-    UserName = input("Please enter your username: ")
-    eMail = input("Please enter the email used for the account: ")
-    PaSSword = input("Please enter your password: ")
-    Website = input("Please enter the web address here: ")
+    CLEAR_SCREEN = '\033[2J'
+    Magenta = '\u001b[35m'   # mode 31 = red forground
+    RESET = '\033[0m'  # mode 0  = reset
+    print(CLEAR_SCREEN + Magenta + """
+░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
+░██████╗░░█████╗░░██████╗░██████╗░██╗░░░░░░░██╗░█████╗░██████╗░██████╗░
+░██╔══██╗██╔══██╗██╔════╝██╔════╝░██║░░██╗░░██║██╔══██╗██╔══██╗██╔══██╗
+░██████╔╝███████║╚█████╗░╚█████╗░░╚██╗████╗██╔╝██║░░██║██████╔╝██║░░██║
+░██╔═══╝░██╔══██║░╚═══██╗░╚═══██╗░░████╔═████║░██║░░██║██╔══██╗██║░░██║
+░██║░░░░░██║░░██║██████╔╝██████╔╝░░╚██╔╝░╚██╔╝░╚█████╔╝██║░░██║██████╔╝
+░╚═╝░░░░░╚═╝░░╚═╝╚═════╝░╚═════╝░░░░╚═╝░░░╚═╝░░░╚════╝░╚═╝░░╚═╝╚═════╝░
+░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
+░███╗░░░███╗░█████╗░███╗░░██╗░█████╗░░██████╗░███████╗██████╗░░░░░░░░░░
+░████╗░████║██╔══██╗████╗░██║██╔══██╗██╔════╝░██╔════╝██╔══██╗░░░░░░░░░
+░██╔████╔██║███████║██╔██╗██║███████║██║░░██╗░█████╗░░██████╔╝░░░░░░░░░
+░██║╚██╔╝██║██╔══██║██║╚████║██╔══██║██║░░╚██╗██╔══╝░░██╔══██╗░░░░░░░░░
+░██║░╚═╝░██║██║░░██║██║░╚███║██║░░██║╚██████╔╝███████╗██║░░██║░░░░░░░░░
+░╚═╝░░░░░╚═╝╚═╝░░╚═╝╚═╝░░╚══╝╚═╝░░╚═╝░╚═════╝░╚══════╝╚═╝░░╚═╝░░░░░░░░░
+░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
+""" + RESET)
+    UserName = input(" - Please enter your username: ")
+    eMail = input(" - Please enter the email used for the account: ")
+    PaSSword = input(" - Please enter your password: ")
+    Website = input(" - Please enter the web address here: ")
     
     print()
-    print("Information saved under Passwords.txt")
+    print(" - Information saved under Passwords.txt")
     
     usern = "Username: " + UserName + "\n"
     Email = "Email: " + eMail + "\n"
@@ -94,7 +133,32 @@ print()
 def choice():
     print()
     print()
-    option = input('Would you like a "Generated" password or your own "My own" password? ')
+    CLEAR_SCREEN = '\033[2J'
+    RED = '\u001b[31m'   # mode 31 = red forground
+    RESET = '\033[0m'  # mode 0  = reset
+    print(CLEAR_SCREEN + RED + """
+░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
+░██████╗░░█████╗░░██████╗░██████╗░██╗░░░░░░░██╗░█████╗░██████╗░██████╗░
+░██╔══██╗██╔══██╗██╔════╝██╔════╝░██║░░██╗░░██║██╔══██╗██╔══██╗██╔══██╗
+░██████╔╝███████║╚█████╗░╚█████╗░░╚██╗████╗██╔╝██║░░██║██████╔╝██║░░██║
+░██╔═══╝░██╔══██║░╚═══██╗░╚═══██╗░░████╔═████║░██║░░██║██╔══██╗██║░░██║
+░██║░░░░░██║░░██║██████╔╝██████╔╝░░╚██╔╝░╚██╔╝░╚█████╔╝██║░░██║██████╔╝
+░╚═╝░░░░░╚═╝░░╚═╝╚═════╝░╚═════╝░░░░╚═╝░░░╚═╝░░░╚════╝░╚═╝░░╚═╝╚═════╝░
+░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
+░███╗░░░███╗░█████╗░███╗░░██╗░█████╗░░██████╗░███████╗██████╗░░░░░░░░░░
+░████╗░████║██╔══██╗████╗░██║██╔══██╗██╔════╝░██╔════╝██╔══██╗░░░░░░░░░
+░██╔████╔██║███████║██╔██╗██║███████║██║░░██╗░█████╗░░██████╔╝░░░░░░░░░
+░██║╚██╔╝██║██╔══██║██║╚████║██╔══██║██║░░╚██╗██╔══╝░░██╔══██╗░░░░░░░░░
+░██║░╚═╝░██║██║░░██║██║░╚███║██║░░██║╚██████╔╝███████╗██║░░██║░░░░░░░░░
+░╚═╝░░░░░╚═╝╚═╝░░╚═╝╚═╝░░╚══╝╚═╝░░╚═╝░╚═════╝░╚══════╝╚═╝░░╚═╝░░░░░░░░░
+░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
+""" + RESET)
+    print()
+    print(' - To have your password generated enter "Generated"')
+    print(' - To enter your own password enter "My own"')
+    print(' - To exit enter "Exit"')
+    print()
+    option = input("Enter your option here: ")
     if option == ("Generated"):
         clear()
         print()
@@ -122,6 +186,7 @@ def choice():
         pause()
         clear()
         exit()
+    
     if option == ("my own"):
         clear()
         print()
@@ -131,6 +196,7 @@ def choice():
         pause()
         clear()
         exit()
+    
     if option == ("My Own"):
         clear()
         print()
@@ -140,6 +206,15 @@ def choice():
         pause()
         clear()
         exit()
+        
+    if option == ("Exit"):
+        clear()
+        exit()
+    
+    if option == ("exit"):
+        clear()
+        exit()
+        
     else:
         print()
         print("Invalid Input.")
