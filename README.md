@@ -10,10 +10,9 @@ fill in all the user inputs that come up.
 # Stored
 All your passwords will be stored in the folder under "passowrd.txt"
 
+# Known Bugs
+When on the "Saving Password" screen and recieved an input error, you will be asked to re-enter your information causing a duplicate of information in passwords.txt
 
-
-
-
-
-
+# Self Promotion
+Go check out some of my other repositories
 https://github.com/aiden04?tab=repositories
