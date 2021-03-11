@@ -80,6 +80,10 @@ def Generated_pswd():
     file.write("===============================================\n")
     file.write("\n")
     file.close
+    
+    print()
+    pause()
+    choice()
 
 def User_pswd():
     file = open("passwords.txt", 'a')
@@ -125,6 +129,10 @@ def User_pswd():
     file.write("===============================================\n")
     file.write("\n")
     file.close
+    
+    print()
+    pause()
+    choice()
 
 print()
 print()
@@ -154,6 +162,7 @@ def Invalid():
 
 
 def choice():
+    clear()
     print()
     print()
     CLEAR_SCREEN = '\033[2J'
