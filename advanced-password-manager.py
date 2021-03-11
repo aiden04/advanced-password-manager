@@ -1,6 +1,7 @@
 import random
 import array
 import os
+import getpass
 
 clear = lambda: os.system('cls')
 pause = lambda: os.system('pause')
@@ -110,11 +111,8 @@ def User_pswd():
 """ + RESET)
     UserName = input(" - Please enter your username: ")
     eMail = input(" - Please enter the email used for the account: ")
-    PaSSword = input(" - Please enter your password: ")
+    PaSSword = getpass.getpass(" - Please enter your password: ")
     Website = input(" - Please enter the web address here: ")
-    
-    print()
-    print(" - Information saved under Passwords.txt")
     
     usern = "Username: " + UserName + "\n"
     Email = "Email: " + eMail + "\n"
@@ -129,13 +127,30 @@ def User_pswd():
     file.write("===============================================\n")
     file.write("\n")
     file.close
+    print()
+    print(" - Information saved under Passwords.txt")
+    print()
+    choose = input(" - Would you like to show your password?(y, n): ")
+    if choose == ('y'):
+        print()
+        print(f' - Your password for {Website} is "{PaSSword}"')
+        print()
+        pause()
+        choice()
+    if choose == ('n'):
+        clear()
+        choice()
+    else:
+        Invalid()
+        clear()
+        User_pswd()
     
     print()
     pause()
     choice()
 
 print()
-print()
+print()   
 
 def Invalid():
     clear()
